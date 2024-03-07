@@ -1,0 +1,77 @@
+= Project Manager Manual for Dialogflow
+:toc: auto
+:T: <<toc,Back to top>>
+
+== Getting Started
+
+Go to https://dialogflow.cloud.google.com/[Google DialogFlow] and log in with your Google account.
+
+image::image-1.png[]
+
+=== Creating New Project
+
+For a fresh account, you may create a chatbot after agreeing to the *Terms of Service*
+
+image::image-2.png[]
+
+*Create an Agent* from the left sidebar
+
+image::image-3.png[]
+
+Give it a name and set the *Language* and *Timezone*
+
+image::image-4.png[]
+
+Your agent must be linked to a google project. Select the project you want to use or *Create a New Project*.
+
+=== Editing Existing Project
+
+For an account with existing bots, you can click on the *Dropdown* menu to select it.
+
+image::image.png[]
+
+{T}
+
+== Granting Team Access
+
+To allow your team members to access the project, head to the *Settings(Cog Wheel) > Share*
+
+image::2024-03-07T13-56-51-604Z.png[] 
+
+image:2024-03-07T13-35-44-805Z.png[] 
+
+You may add (or remove) the email of your team members, either as a *Reviewer* or *Developer*
+
+{T}
+
+== Enabling Fullfillment
+
+Enabling fullfillment is important as it is the core part of the logic processing for the chatbot. The fulfillment tab is on the left sidebar
+
+image::2024-03-07T13-58-13-381Z.png[] 
+
+There are 2 ways of using fulfillment
+
+=== 1. Using Webhook
+
+image::2024-03-07T13-46-04-745Z.png[]
+
+This requires having a server accessible by the chatbot, where the server will do most of the logic processing.
+
+=== 2. Using Google Cloud
+
+image::2024-03-07T13-50-17-554Z.png[] 
+
+This allows code execution using ((Google Cloud Service)), though limited to only *Javascript*.
+
+{T}
+
+== Managing Backups 
+
+It is important to make backups regularly when developing a complex chatbot. You can do this by heading to *Settings(Cog Wheel) > Export and Import*
+
+image::2024-03-07T14-22-04-048Z.png[] 
+
+You can download the agent as a zip file and make a local copy. You can restore or import an agent from another one.
+
+{T}
