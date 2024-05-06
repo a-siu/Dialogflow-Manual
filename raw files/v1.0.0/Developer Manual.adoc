@@ -1,0 +1,60 @@
+= Developer Manual for ((Dialogflow))
+:toc: auto
+:T: <<toc,Back to top>>
+
+== Creating Intents
+
+*((Intents))* are used to teach the chatbot to understand user inputs. Each user input can only be matched to one of the intents in the chatbot. Thus intents should be created for different functions. Each intent would contain:
+
+. *((Title))* + 
+The name given to the intent. Does not affect the function of the intent itself but should be informative. 
+
+. *((Context))* (_optional_)
+.. *((Input Context))* +
+If present, this intent can only be activated if the previous intent has the same context as output conetext.
+
+.. *((Output Context))* +
+If present, subsequent intents must have the same context as input context to be activated.  
+
+. *((Training Phrases))* +
+*Core* of any intents. Enter possible user inputs for recognition training. The chatbot should be able to recognize similar sentence patterns and extract important parameters from the input. Typically, 10 to 30 different training phrases should be used for adequate training. However, more would be needed if the recognition of short commands is also desired.
+
+. *((Parameters))*+
+Specific pieces of string to be recognize from the user input. Will be automatically added when entering training phrases, given that the necessary <<entities,entities>> are created
+
+. *((Responses))* +
+Unless handled by fulfillment, a response will be taken from this list as the answer to the user input. A parameter can be included in the response with the prefix "$".
+
+=== Examples
+
+TODO: Add example
+
+{T}
+
+== Creating [[entities]]Entities 
+
+*((Entities))* are *((parameters))* which should be extracted from user input for further processing. Each entry would contain: 
+
+. *((Title))* +
+The *Title* of an *Entity* is the name given to the entity. It does not affect the nature of the entity. However, for clarity, it should be a short piece of string noting the category of the parameters. See _Example_ for clarification.
+
+. *((Entries))* +
+Each *Entry* is a specific item under the category noted by the title. It contains multiple *((synonyms))* to be recognized, and the *((reference value))* corresponding to the recognized synonym.
+
+.. *((Synonyms))* +
+Exact string that would be matched to this entry of this entity. Multiple synonyms can be added to the same entry to allow short-form or abbreviations to be recognized by the chatbot. See _Example_ for clarification.
+
+.. *((Reference Value))* +
+Actual string that would be accepted by the chatbot and then passed to the subsequent processing. See _Example_ for clarification. 
+
+=== Examples
+
+TODO: Add example
+
+{T}
+
+== Fullfillment
+
+Fullfillment runs on *((Javascript))*. It is a scripting language similar to python.
+
+[index]
