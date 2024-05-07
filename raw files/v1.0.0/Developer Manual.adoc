@@ -55,6 +55,15 @@ TODO: Add example
 
 == Fullfillment
 
-Fullfillment runs on *((Javascript))*. It is a scripting language similar to python.
+Fullfillment runs on https://developer.mozilla.org/en-US/docs/Web/JavaScript[*((Javascript))*]. It is a scripting language similar to https://www.python.org/[*((Python))*]. 
 
+Specifically for the purpose of accessing google drive content, you may refer to the following code snippet
+
+.Source: Google Drive API
+https://raw.githubusercontent.com/a-siu/Dialogflow-Manual/main/raw%20files/v1.0.0/getFileFromGoogleDrive.js[Link to snippet]
+
+
+
+
+{T}
 [index]

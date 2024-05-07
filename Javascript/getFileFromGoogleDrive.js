@@ -28,7 +28,7 @@ async function downloadFile(realFileId) {
     }
   }
 
-//  downloadFile(place ID here) 
+//  downloadFile(place ID here)
 
  /** The ID of the file can be found when right clicking the file and then select copy link.
   *  The ID string is right after "/d/"
